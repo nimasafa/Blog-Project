@@ -1,52 +1,54 @@
 .container{
     display:grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* Initially each element has its own row for small screens */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 50px 600px 50px;
     grid-template-areas: 
     "hd"
-    "sd"
+    "nav"
     "main"
     "ft";
     border: 2px solid yellow;
+    font-family: 'Roboto', sans-serif;
   }
-  /* add css for nested grid here */
+
   .nestedGrid{
     display: grid;
+    box-sizing: border-box;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
   }
   .nestedGrid > *{
     border: 2px solid aquamarine;
+    border-radius: 25px;
   }
+
   .box{
       border: 1px solid red;
       background: #F8FA9D;
       }
     .header{
-      /* row start/column start/ row end/ column end */
       grid-area:hd;
     }
-    .footer{
-      grid-area: ft;  
-    }
-    .sidebar{
-      grid-area: sd;
+    .navigation{
+      grid-area:nav;
     }
     .content{
       grid-area: main;
     }
-  /* If Screen Is Wide Enough */
+    .footer{
+      grid-area: ft;  
+    }
+  
+    /* For Larger Screens with minimum of 900px width */
   @media(min-width:900px) {
   .container{
         display:grid;
-        grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 250px 600px;
         grid-template-areas: 
-        "hd hd hd hd hd hd hd hd"
-        "sd sd main main main main main main"
-        "ft ft ft ft ft ft ft ft";
+        "hd hd hd hd"
+        "nav nav nav nav"
+        "main main main main"
+        "ft ft ft ft";
         border: 2px solid red;
     }
   }
