@@ -1,4 +1,4 @@
-.container{
+.container {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 100px 50px 600px 50px;
@@ -7,48 +7,97 @@
     "nav"
     "main"
     "ft";
-    border: 2px solid yellow;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
 
-  .nestedGrid{
+  .nestedGrid {
     display: grid;
-    box-sizing: border-box;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 10px;
   }
+
   .nestedGrid > *{
-    border: 2px solid aquamarine;
-    border-radius: 25px;
+    border: 4px solid rgb(168, 50, 50);
+    border-radius: 10px;
+    padding: 10px;
   }
 
-  .box{
-      border: 1px solid red;
-      background: #F8FA9D;
-      }
-    .header{
+  .card {
+    display: flex;
+  }
+
+  .fatherName {
+    font-family: 'Pinyon Script', cursive;
+    color: white;
+    padding: 10px;
+  }
+
+  .fatherIntro {
+    color: white;
+    padding: 10px;
+  }
+
+  .headerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .navigationGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+  }
+
+  .box {
+      background: none;
+    }
+
+    .header {
       grid-area:hd;
+      text-align: center;
+      font-family: 'Rye', cursive;
+      background-color: rgb(52, 137, 235);
+      border: 1px solid lightgray;
     }
-    .navigation{
+
+    .navigation {
       grid-area:nav;
+      background-color: lightgray;
+      font-size: small;
     }
-    .content{
+
+    .content {
       grid-area: main;
+      background-image: url("../images/FoundingFathers.jpeg");
     }
-    .footer{
-      grid-area: ft;  
+
+    .footer {
+      grid-area: ft;
+      background-color: lightgray; 
+      padding: 10px;
+      font-size: small;
     }
-  
+
+  #constitution {
+    text-align: right;
+  }
+
+  #welcome {
+    font-size: large;
+    text-align: center;
+  }
+
     /* For Larger Screens with minimum of 900px width */
   @media(min-width:900px) {
-  .container{
+  .container {
         display:grid;
         grid-template-areas: 
         "hd hd hd hd"
         "nav nav nav nav"
         "main main main main"
         "ft ft ft ft";
-        border: 2px solid red;
     }
   }
