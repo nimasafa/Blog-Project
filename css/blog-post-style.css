@@ -7,6 +7,7 @@
     "nav"
     "auth"
     "blog"
+    "soc"
     "ft";
     font-family: 'Playfair Display', serif;
   }
@@ -29,6 +30,18 @@
     padding: 10px;
     background-color: rgb(168, 135, 50, 0.5);
     display: block;
+  }
+
+  .blogSocial {
+    grid-area: soc;
+    padding: 10px;
+    font-size: small;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
   }
 
   .blogText {
@@ -58,15 +71,32 @@
     font-size: x-small;
   }
 
+  #facebook {
+    max-height: 20px;
+    width: auto;
+    margin: 10px;
+  }
+
+  #twitter {
+    max-height: 20px;
+    width: auto;
+    margin: 10px;
+  }
+
+  #linkedin {
+    max-height: 20px;
+    width: auto;
+    margin: 10px;
+  }
 
     /* For Larger Screens with minimum of 900px width */
   @media(min-width:900px) {
   .blogContainer {
         display:grid;
-        grid-template-areas: 
+        grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
         "blog blog blog auth"
-        "ft ft ft ft";
+        "ft ft ft soc";
     }
   }
