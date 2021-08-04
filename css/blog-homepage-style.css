@@ -1,8 +1,8 @@
 .container {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 50px 600px 50px;
-    grid-template-areas: 
+    grid-template-rows: 100px 50px 800px 50px;
+    grid-template-areas:
     "hd"
     "nav"
     "main"
@@ -40,8 +40,13 @@
 
   .headerGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 400px 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .headerImage{
+    max-width: auto;
+    max-height: 100px;
   }
 
   .navigationGrid {
@@ -58,7 +63,9 @@
     .header {
       grid-area:hd;
       text-align: center;
+      justify-content: center;
       font-family: 'Rye', cursive;
+      font-size: 1em;
       background-color: rgb(52, 137, 235);
       border: 1px solid lightgray;
     }
@@ -76,7 +83,7 @@
 
     .footer {
       grid-area: ft;
-      background-color: lightgray; 
+      background-color: lightgray;
       padding: 10px;
       font-size: small;
     }
@@ -94,10 +101,24 @@
   @media(min-width:900px) {
   .container {
         display:grid;
-        grid-template-areas: 
+        grid-template-rows: 100px 50px 600px 50px;
+        grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
         "main main main main"
         "ft ft ft ft";
     }
+  
+  .header {
+    font-size: 1.05em;
   }
+
+  .headerGrid {
+    grid-template-columns: repear(3, 1fr);
+  }
+
+  .headerImage{
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

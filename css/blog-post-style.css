@@ -1,12 +1,12 @@
 .blogContainer {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 50px 600px 50px;
-    grid-template-areas: 
+    grid-template-rows: 100px 50px 600px 250px 50px;
+    grid-template-areas:
     "hd"
     "nav"
-    "auth"
     "blog"
+    "auth"
     "soc"
     "ft";
     font-family: 'Playfair Display', serif;
@@ -29,7 +29,7 @@
     grid-area: auth;
     padding: 10px;
     background-color: rgb(168, 135, 50, 0.5);
-    display: block;
+    display: flex;
   }
 
   .blogSocial {
@@ -62,9 +62,10 @@
   }
 
   .aboutAuthor {
-    margin-top: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 5px;
   }
 
   #author {
@@ -93,10 +94,15 @@
   @media(min-width:900px) {
   .blogContainer {
         display:grid;
+        grid-template-rows: 100px 50px 600px 50px;
         grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
         "blog blog blog auth"
         "ft ft ft soc";
+    }
+  
+    .blogAuthor {
+      display: block;
     }
   }
