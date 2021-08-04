@@ -1,0 +1,72 @@
+.blogContainer {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 50px 600px 50px;
+    grid-template-areas: 
+    "hd"
+    "nav"
+    "auth"
+    "blog"
+    "ft";
+    font-family: 'Playfair Display', serif;
+  }
+
+  .blogTitle {
+    font-family: 'Pinyon Script', cursive;
+    color: black;
+    font-size: xx-large;
+    text-align: center;
+  }
+
+  .blogContent {
+    grid-area: blog;
+    background-image: url("../images/JoinorDie.png");
+    background-size: 100% 100%;
+  }
+
+  .blogAuthor {
+    grid-area: auth;
+    padding: 10px;
+    background-color: rgb(168, 135, 50, 0.5);
+    display: block;
+  }
+
+  .blogText {
+    display: inline-block;
+    color: black;
+    padding: 10px;
+  }
+
+  .fatherText {
+    color: black;
+  }
+
+  .avatar {
+    max-height: 50px;
+    width: auto;
+    object-fit: scale-down;
+    vertical-align: bottom;
+  }
+
+  .aboutAuthor {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #author {
+    font-size: x-small;
+  }
+
+
+    /* For Larger Screens with minimum of 900px width */
+  @media(min-width:900px) {
+  .blogContainer {
+        display:grid;
+        grid-template-areas: 
+        "hd hd hd hd"
+        "nav nav nav nav"
+        "blog blog blog auth"
+        "ft ft ft ft";
+    }
+  }
