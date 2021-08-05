@@ -1,7 +1,7 @@
 .blogContainer {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 50px 600px 250px 50px;
+    grid-template-rows: 100px 60px 950px 250px 50px;
     grid-template-areas:
     "hd"
     "nav"
@@ -53,6 +53,23 @@
   .fatherText {
     color: black;
   }
+  
+  .quotation {
+    text-align: center;
+  }
+
+  .caption{
+    margin-left: 33%;
+    font-size: small;
+  }
+
+  .portrait {
+    max-height: 350px;
+    width: auto;
+    object-fit: scale-down;
+    border-radius: 8%;
+    margin-left: 33%;
+  }
 
   .avatar {
     max-height: 50px;
@@ -66,6 +83,13 @@
     flex-direction: row;
     margin-top: 10px;
     gap: 5px;
+  }
+
+  #returnLink{
+    max-width: 100px;
+    height: auto;
+    padding-top: -20px;
+    font-family: 'Playfair Display', serif;
   }
 
   #author {
@@ -94,7 +118,7 @@
   @media(min-width:900px) {
   .blogContainer {
         display:grid;
-        grid-template-rows: 100px 50px 600px 50px;
+        grid-template-rows: 100px 60px 950px 50px;
         grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
