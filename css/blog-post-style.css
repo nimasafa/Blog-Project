@@ -64,8 +64,8 @@
   }
 
   .portrait {
-    max-height: 350px;
-    width: auto;
+    max-height: 300px;
+    max-width: 50%;
     object-fit: scale-down;
     border-radius: 8%;
     margin-left: 33%;
