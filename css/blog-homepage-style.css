@@ -30,12 +30,12 @@
   .fatherName {
     font-family: 'Pinyon Script', cursive;
     font-size: 2vw;
-    color: white;
+    color: black;
     padding: 10px;
   }
 
   .fatherIntro {
-    color: white;
+    color: black;
     padding: 10px;
     font-size: 1.5vw;
   }
@@ -87,7 +87,7 @@
 
     .content {
       grid-area: main;
-      background-image: url("../images/FoundingFathers.jpeg");
+      background-image: url("../images/FoundingFathers.png");
     }
 
     .footer {
