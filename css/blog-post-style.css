@@ -15,7 +15,7 @@
   .blogTitle {
     font-family: 'Pinyon Script', cursive;
     color: black;
-    font-size: 3vw;
+    font-size: calc(12px + 2vw);
     text-align: center;
   }
 
@@ -30,13 +30,13 @@
     padding: 10px;
     background-color: rgb(168, 135, 50, 0.5);
     display: flex;
-    font-size: 1.5vw;
+    font-size: calc(10px + 0.5vw);
   }
 
   .blogSocial {
     grid-area: soc;
     padding: 10px;
-    font-size: 1vw;
+    font-size: calc(5px + 0.5vw);
     background-color: lightblue;
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
     display: inline-block;
     color: black;
     padding: 10px;
-    font-size: 1.5vw;
+    font-size: calc(10px + 0.5vw);
   }
 
   .fatherText {
@@ -62,7 +62,7 @@
 
   .caption{
     margin-left: 33%;
-    font-size: 1vw;
+    font-size: calc(10px + 0.5vw);
   }
 
   .portrait {
@@ -85,7 +85,7 @@
     flex-direction: row;
     margin-top: 10px;
     gap: 5px;
-    font-size: 1.5vw;
+    font-size: calc(10px + 0.5vw);
   }
 
   #returnLink{
@@ -93,11 +93,11 @@
     height: auto;
     padding-top: -20px;
     font-family: 'Playfair Display', serif;
-    font-size: 1.2vw;
+    font-size: calc(10px + 0.5vw);
   }
 
   #author {
-    font-size: .8vw;
+    font-size: calc(5px + 0.5vw);
   }
 
   #facebook {
@@ -118,8 +118,8 @@
     margin: 10px;
   }
 
-    /* For Larger Screens with minimum of 900px width */
-  @media(min-width:900px) {
+    /* For Medium and Larger Screens with minimum of 900px width */
+  @media(min-width:600px) {
   .blogContainer {
         display:grid;
         /* grid-template-rows: 100px 60px 950px 50px; */
