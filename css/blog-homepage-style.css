@@ -1,7 +1,7 @@
 .container {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 100px 50px 800px 50px;
+    /* grid-template-rows: 100px 50px 800px 50px; */
     grid-template-areas:
     "hd"
     "nav"
@@ -29,6 +29,7 @@
 
   .fatherName {
     font-family: 'Pinyon Script', cursive;
+    font-size: 2vw;
     color: white;
     padding: 10px;
   }
@@ -36,18 +37,25 @@
   .fatherIntro {
     color: white;
     padding: 10px;
+    font-size: 1.5vw;
   }
 
   .headerGrid {
     display: grid;
-    grid-template-columns: 1fr 400px 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
+    vertical-align: middle;
   }
 
   .headerImage{
     max-width: auto;
     max-height: 100px;
-    object-fit: scale-down;
+    margin-bottom: -5px;
+  }
+
+  .headerTitle{
+    margin-bottom: -20px;
+    font-size: 1vw;
   }
 
   .navigationGrid {
@@ -66,7 +74,7 @@
       text-align: center;
       justify-content: center;
       font-family: 'Rye', cursive;
-      font-size: 1em;
+      font-size: 1.5vw;
       background-color: rgb(52, 137, 235);
       border: 1px solid lightgray;
     }
@@ -74,7 +82,7 @@
     .navigation {
       grid-area:nav;
       background-color: lightgray;
-      font-size: small;
+      font-size: 1vw;
     }
 
     .content {
@@ -86,7 +94,7 @@
       grid-area: ft;
       background-color: lightgray;
       padding: 10px;
-      font-size: small;
+      font-size: 1vw;
     }
 
   #constitution {
@@ -94,15 +102,15 @@
   }
 
   #welcome {
-    font-size: large;
+    font-size: 1.5vw;
     text-align: center;
   }
 
     /* For Larger Screens with minimum of 900px width */
   @media(min-width:900px) {
   .container {
-        display:grid;
-        grid-template-rows: 100px 50px 600px 50px;
+        display: grid;
+        /* grid-template-rows: 100px 50px 600px 50px; */
         grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
@@ -111,7 +119,11 @@
     }
   
   .header {
-    font-size: 1.05em;
+    font-size: 1.2vw;
+  }
+
+  .fatherIntro {
+    font-size: 1.25vw;
   }
 
   .headerGrid {
@@ -122,5 +134,10 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: scale-down;
+  }
+
+  .headerTitle{
+    margin-bottom: -20px;
+    margin-top: 20px;
   }
 }
