@@ -1,6 +1,7 @@
+/* ------------- mobile ---------------*/
 .container {
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     grid-template-areas:
     "hd"
     "nav"
@@ -11,8 +12,8 @@
 
   .nestedGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
     grid-gap: 10px;
   }
 
@@ -28,7 +29,7 @@
 
   .fatherName {
     font-family: 'Pinyon Script', cursive;
-    font-size: calc(12px + 1vw);
+    font-size: calc(14px + .8vw);
     color: black;
     padding: 10px;
   }
@@ -36,25 +37,24 @@
   .fatherIntro {
     color: black;
     padding: 10px;
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
   }
 
   .headerGrid {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
-    vertical-align: middle;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
   }
 
   .headerImage{
     max-width: auto;
     max-height: 100px;
-    margin-bottom: -5px;
   }
 
   .headerTitle{
-    margin-bottom: -20px;
-    font-size: calc(5px + 0.5vw);
+    font-size: calc(8px + 0.5vw);
   }
 
   .navigationGrid {
@@ -81,7 +81,7 @@
     .navigation {
       grid-area:nav;
       background-color: lightgray;
-      font-size: calc(5px + 0.5vw);
+      font-size: calc(8px + 0.5vw);
     }
 
     .content {
@@ -93,7 +93,7 @@
       grid-area: ft;
       background-color: lightgray;
       padding: 10px;
-      font-size: calc(5px + 0.5vw);
+      font-size: calc(8px + 0.5vw);
     }
 
   #constitution {
@@ -101,12 +101,44 @@
   }
 
   #welcome {
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
     text-align: center;
   }
 
-    /* For Medium and Larger Screens with minimum of 600px width */
-  @media(min-width:600px) {
+  /* --------------- Tablet --------------*/
+  @media(min-width:768px) {
+  .container {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+      "hd hd hd hd"
+      "nav nav nav nav"
+      "main main main main"
+      "ft ft ft ft";
+    }
+  
+  .nestedGrid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+  
+  .headerGrid {
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr;
+      vertical-align: middle;
+    }  
+  
+  .headerImage{
+      padding: -.5px;
+    }
+
+  }
+
+
+    /* For Laptops and Larger Screens with minimum of 900px width */
+  @media(min-width:900px) {
   .container {
         display: grid;
         grid-template-areas:
@@ -132,10 +164,5 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: scale-down;
-  }
-
-  .headerTitle{
-    margin-bottom: -20px;
-    margin-top: 20px;
   }
 }

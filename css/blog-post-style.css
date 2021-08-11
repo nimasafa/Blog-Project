@@ -1,7 +1,7 @@
+/*--------------- mobile -----------------*/
 .blogContainer {
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: 100px 60px 950px 250px 50px; */
+    grid-template-columns: 1fr;
     grid-template-areas:
     "hd"
     "nav"
@@ -30,13 +30,13 @@
     padding: 10px;
     background-color: rgb(168, 135, 50, 0.5);
     display: flex;
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
   }
 
   .blogSocial {
     grid-area: soc;
     padding: 10px;
-    font-size: calc(5px + 0.5vw);
+    font-size: calc(8px + 0.5vw);
     background-color: lightblue;
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
     display: inline-block;
     color: black;
     padding: 10px;
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
   }
 
   .fatherText {
@@ -81,11 +81,11 @@
   }
 
   .aboutAuthor {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     margin-top: 10px;
     gap: 5px;
-    font-size: calc(10px + 0.5vw);
+    font-size: calc(12px + 0.5vw);
   }
 
   #returnLink{
@@ -97,7 +97,7 @@
   }
 
   #author {
-    font-size: calc(5px + 0.5vw);
+    font-size: calc(8px + 0.5vw);
   }
 
   #facebook {
@@ -118,11 +118,28 @@
     margin: 10px;
   }
 
-    /* For Medium and Larger Screens with minimum of 900px width */
-  @media(min-width:600px) {
+    /*--------------- tablet ----------------*/
+  @media(min-width:768px) {
   .blogContainer {
         display:grid;
-        /* grid-template-rows: 100px 60px 950px 50px; */
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd"
+        "nav nav nav nav nav nav nav nav nav"
+        "blog blog blog blog blog blog auth auth auth"
+        "ft ft ft ft ft ft soc soc soc";
+    }
+
+  .aboutAuthor {
+      flex-direction: column;
+    }
+  }
+
+    /* For Laptops and Larger Screens with minimum of 900px width */
+  @media(min-width:900px) {
+  .blogContainer {
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
         "hd hd hd hd"
         "nav nav nav nav"
@@ -132,5 +149,9 @@
   
     .blogAuthor {
       display: block;
+    }
+
+    .aboutAuthor {
+      flex-direction: row;
     }
   }
